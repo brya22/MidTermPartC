@@ -2,19 +2,25 @@ package midtermexam_versiona_extensioncode;
 
 import java.util.*;
 
+
 public class TestUserprofile extends UserProfile {
 
-    private String userID;//the userID
-    private String genre;// the user's preferred genre of movie
-    private String[] genres = {"Comedy", "Drama", "Action", "Mystery"};//available genres of movies
+    String userID;//the userID
+    String genre;// the user's preferred genre of movie
 
-    Scanner sc = new Scanner(System.in);
-    System.out.println("enter name:")
-    userID = sc.next();
-    System.out.println("select your favourite genre: " + genres);
-    genre = sc.next();
-    System.out.println("profile created!");
-    UserProfile(userID, genre);
+    public static void main(String[] args) {
+        String[] genres = {"Comedy", "Drama", "Action", "Mystery"};//available genres of movies
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter name:");
+        String userID = sc.next();
+        setUserID(userID);
+        System.out.println("select your favourite genre: " + genres);
+        String genre = sc.next();
+        setGenre(genre);
+        System.out.println("profile created!");
+        UserProfile(userID, genre);
+    }
+
 
     @Override
     public void setUserID(String userID) {
