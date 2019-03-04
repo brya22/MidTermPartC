@@ -5,9 +5,6 @@ import java.util.*;
 
 public class TestUserprofile extends UserProfile {
 
-    String userID;//the userID
-    String genre;// the user's preferred genre of movie
-
     public static void main(String[] args) {
         String[] genres = {"Comedy", "Drama", "Action", "Mystery"};//available genres of movies
         Scanner sc = new Scanner(System.in);
@@ -18,7 +15,7 @@ public class TestUserprofile extends UserProfile {
         String genre = sc.next();
         setGenre(genre);
         System.out.println("profile created!");
-        UserProfile(userID, genre);
+        new UserProfile(userID, genre);
     }
 
 
